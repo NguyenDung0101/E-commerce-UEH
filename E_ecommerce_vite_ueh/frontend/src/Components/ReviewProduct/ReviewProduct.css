@@ -1,0 +1,285 @@
+.rating-section h3 {
+  text-align: center;
+  font-size: 28px;
+}
+
+.rating-summary {
+  display: flex;
+  justify-content: space-between;
+  /* Giữ khoảng cách giữa các phần tử */
+  align-items: center;
+  /* Căn giữa các phần tử dọc */
+  flex-wrap: wrap;
+  /* Để cho phép các phần tử chuyển dòng nếu cần */
+}
+
+.rating-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  flex: 1;
+  /* Để phần này chiếm không gian */
+}
+
+.star {
+  font-size: 24px;
+  /* Kích thước của ngôi sao */
+  margin: 0 5px;
+  text-align: center
+    /* Khoảng cách giữa các ngôi sao */
+}
+
+.rating-score {
+  font-size: 50px;
+  color: #d87c37;
+  font-weight: bold;
+}
+
+.stars {
+  color: #f4b400;
+  font-size: 30px;
+}
+
+.rating-details {
+  flex: 2;
+  /* Để phần này chiếm nhiều không gian hơn */
+  margin: 0 50px;
+  /* Cách giữa phần số sao và chi tiết đánh giá */
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star-level {
+  width: 40px;
+  font-size: 16px;
+}
+
+.progress-bar {
+  flex-grow: 1; /* Chiếm phần còn lại của hàng */
+  height: 10px; /* Chiều cao của thanh progress */
+  background-color: #eee; /* Màu nền */
+  border-radius: 5px; /* Bo góc */
+  margin: 0 10px; /* Khoảng cách giữa các phần tử */
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #d87c37;
+  border-radius: 5px;
+}
+
+.percent {
+  font-size: 14px;
+  color: #666;
+}
+
+.rating-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.review-button {
+  background-color: #d87c37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.review-button:hover {
+  background-color: #b86d30;
+}
+
+/* Review Comment */
+.reviews-list {
+  margin: 0 50px;
+}
+
+.review-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 85px;
+}
+
+.user-review {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #d87c37;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.user-details {
+  font-size: 14px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.review-time {
+  color: #888;
+}
+
+.user-rating {
+  margin-left: 20px;
+}
+
+.user-rating p {
+  margin: 5px 0;
+}
+
+.reply {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.reply:hover {
+  text-decoration: underline;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.comment-tools {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.submit-button {
+  background-color: #d87c37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #b86d30;
+}
+
+.comments-list {
+  color: #171615;
+  font-style: border;
+  font-size: large;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .rating-details{
+    margin: 0 10px;
+  }
+
+  .rating-section {
+    margin: 0px 30px;
+  }
+
+  .rating-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rating-number {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .review-button,
+  .submit-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .comment-tools {
+    justify-content: center;
+    /* Căn giữa nút trong chế độ mobile */
+  }
+
+  .review-button,
+  .submit-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rating-details{
+    margin: 0 10px;
+  }
+
+  .rating-section {
+    margin: 0px 10px;
+  }
+
+  .comment-tools {
+    justify-content: center;
+    /* Căn giữa nút trong chế độ mobile */
+  }
+
+  .submit-button {
+    width: 100%;
+    /* Có thể mở rộng nút chiếm toàn bộ chiều rộng */
+  }
+
+  .user-review {
+    flex-direction: column;
+  }
+}

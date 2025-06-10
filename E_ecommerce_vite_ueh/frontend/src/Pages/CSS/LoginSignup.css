@@ -1,0 +1,87 @@
+/* Tổng quan của toàn bộ màn hình */
+.loginsignup {
+  width: 100%; /* Chiếm toàn bộ chiều rộng của màn hình */
+  height: 100vh; /* Chiếm toàn bộ chiều cao của màn hình */
+  background: #c5ccc4; /* Màu nền nhạt */
+  display: flex; /* Dùng flex để căn giữa */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Container của form đăng ký */
+.loginsignup-container {
+  width: 380px; /* Chiều rộng cố định của form */
+  background: white; /* Màu nền trắng cho form */
+  padding: 40px; /* Khoảng cách bên trong container */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  border-radius: 8px; /* Bo góc container */
+  text-align: center; /* Căn giữa nội dung bên trong */
+}
+
+/* Tiêu đề của form */
+.loginsignup-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Vùng chứa các trường input */
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Thiết lập cho các trường input */
+.loginsignup-fields input {
+  height: 45px;
+  padding-left: 15px;
+  font-size: 16px;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+  color: #5c5c5c;
+  outline: none;
+}
+
+/* Nút "Continue" */
+.loginsignup-container button {
+  width: 100%;
+  height: 50px;
+  background: #D36F31;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* Văn bản đăng nhập */
+.loginsignup-login {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #5c5c5c;
+}
+
+.loginsignup-login span {
+  color: #D36F31;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Vùng chứa checkbox và văn bản */
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa checkbox và văn bản */
+  margin-top: 15px;
+  font-size: 14px;
+  color: #5c5c5c;
+}
+
+input[type="checkbox"] {
+  width: 16px; /* Điều chỉnh kích thước của checkbox */
+  height: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,390 @@
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 3px -2px black;
+  padding: 0 !important;
+}
+
+.navbar1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* Đảm bảo phần navbar2 mở rộng toàn bộ màn hình */
+  padding: 6px 5%;
+  /* Sử dụng padding thay vì margin để giữ nội dung không sát cạnh */
+  background-color: #f8f8f8;
+}
+
+.navbar1 img {
+  display: inline-block;
+}
+
+.navbar1-contact {
+  display: flex;
+  align-items: center;
+}
+
+.navbar1-contact div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  /* Spacing between contact items */
+}
+
+.navbar1-contact img {
+  margin-right: 5px;
+}
+
+.promotion {
+  flex-grow: 1;
+  /* Allow this section to take up remaining space */
+  text-align: center;
+  /* Center promotion text */
+  font-size: 16px;
+  /* Font size for promotion */
+  color: #d36f31;
+  /* Highlight color for promotions */
+  font-weight: bold;
+  /* Bold font for emphasis */
+}
+
+.navbar1-3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 8px;
+}
+
+
+.navbar2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  /* Sử dụng padding để căn chỉnh nội dung trong */
+  width: 100%;
+  /* Đảm bảo phần navbar2 mở rộng toàn bộ màn hình */
+  border-top: 1px solid #DEE2E6;
+}
+
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  font-weight: 700;
+  margin-right: 20px;
+  margin-bottom: 0 !important;
+  gap: 20px;
+}
+
+.nav-items li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+
+.nav-items li:hover {
+  color: #D37235;
+  cursor: pointer;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+  /* Thêm hiệu ứng chuyển đổi màu mượt */
+}
+
+/* Expand sản phẩm */
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown .dropdown-menu {
+  display: none;
+  text-align: center;
+  width: 180px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 10;
+  transition: opacity 0.1s ease;
+  border: 1px solid #D67B42;
+  border-radius: 4px;
+}
+
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown.active .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  color: #e67e22;
+}
+
+@media (max-width: 768px) {
+
+  /* Trên mobile, hiển thị dropdown như một phần của menu */
+  .has-dropdown .dropdown-menu {
+    position: static;
+    display: none;
+    padding-left: 20px;
+    background-color: white;
+    box-shadow: none;
+  }
+
+  .has-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li {
+    padding: 8px 0;
+  }
+
+  .dropdown-menu li a {
+    color: #333;
+  }
+
+  .dropdown-menu li a:hover {
+    color: #e67e22;
+  }
+}
+
+/* End Expand sản phẩm */
+
+.nav-items .active {
+  padding-bottom: 2px;
+  border-bottom: 3px solid #D37235;
+}
+
+.nav-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-icon img {
+  margin-right: 12px;
+  position: relative;
+}
+
+.nav-icon .nav-count1 {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  margin-left: -30px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+  z-index: 1;
+}
+
+.nav-icon .nav-count2 {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  margin-left: -30px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+  z-index: 1;
+}
+
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-profile-img {
+  width: 55px;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 126px;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #D67B42;
+  outline: 2px solid white;
+  list-style: none;
+}
+
+.nav-profile-dropdown a {
+  text-emphasis: none;
+}
+
+.nav-profile-dropdown li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-profile-dropdown li:hover {
+  color: #D67B42;
+  cursor: pointer;
+}
+
+.nav-profile-dropdown li img {
+  width: 24px;
+}
+
+.icon-bar {
+  display: none; /* Hidden on desktop */
+}
+
+/* Responsive Tablet */
+@media (max-width: 840px) {
+  .email {
+    display: none !important; /* Hide promotion on mobile */
+  }
+
+  .nav-items {
+    display: none !important;
+    gap: 10px;
+  }
+
+  .nav-items.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-bar {
+    display: block;
+  }
+  .nav-menu.open {
+    display: block;
+  }
+}
+
+@media (max-width: 874px) {
+  .nav-items {
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-items li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-menu-items a {
+  text-decoration: none;
+  color: #333;
+}
+
+.mobile-menu-items li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 900; /* Behind the mobile menu */
+}
+
+.products-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Indicate that this is clickable */
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sub-menu {
+  list-style-type: none;
+  padding: 0 20px; /* Indent sub-menu */
+  margin: 0;
+}
+
+.sub-menu li {
+  padding: 10px 0; /* Additional padding for sub-menu items */
+  border-bottom: none; /* Remove border for sub-menu items */
+}

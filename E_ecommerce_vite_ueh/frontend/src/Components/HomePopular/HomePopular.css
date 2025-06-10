@@ -1,0 +1,150 @@
+.san-pham-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Ẩn thanh cuộn dọc */
+}
+
+.san-pham-title {
+  font-size: 28px;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.san-pham-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.san-pham-grid-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.san-pham-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  max-width: calc(100% - 80px); /* Giảm chiều rộng để chừa chỗ cho nút điều hướng */
+  margin: 0 auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Ẩn scrollbar trên Firefox */
+}
+
+/* Nút chuyển slide */
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #e67e22;
+}
+
+/* Ẩn scrollbar trên Chrome, Safari và Edge */
+.san-pham-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.san-pham-item {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+  min-width: 200px;
+  max-width: 200px;
+  height: 250px;
+  scroll-snap-align: start;
+}
+
+.san-pham-item:hover {
+  transform: translateY(-5px);
+}
+
+.san-pham-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.san-pham-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.san-pham-price {
+  font-size: 14px;
+  color: #888;
+}
+
+.banner {
+  height: auto;
+  padding: 20px 0;
+}
+
+.banner > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .san-pham-grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .prev-button,
+  .next-button {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .san-pham-grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+/* Responsive design cho banner */
+@media (max-width: 768px) {
+  .banner {
+    padding: 10px 0;
+  }
+
+  .banner > img {
+    height: 200px;
+  }
+}

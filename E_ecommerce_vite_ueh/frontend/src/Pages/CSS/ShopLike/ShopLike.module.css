@@ -1,0 +1,42 @@
+.news_header {
+  background-image: url('https://www.ueh.edu.vn/images/nso-splash-landscape-1499x999.gif'); /* Đường dẫn đến hình ảnh */
+  background-size: cover; /* Bao phủ toàn bộ khu vực */
+  background-position: center; /* Căn giữa hình ảnh */
+  background-repeat: no-repeat; /* Không lặp lại */
+  width: 100%; /* Chiều rộng toàn bộ màn hình */
+  padding: 80px 0; /* Tùy chỉnh khoảng cách trên dưới */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-top: 1px !important;
+}
+
+.news_header .title {
+  font-size: 36px;
+  color: #D67B42;
+  margin: 12px 0;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;
+}
+
+.breadcrumb_1 {
+  margin: 0 6px;
+}
+
+.breadcrumb h3 {
+  font-size: 20px;
+  color: #f0f0f0;
+}
+
+.breadcrumb span {
+  font-size: 20px;
+    color: #f0f0f0;
+}
+

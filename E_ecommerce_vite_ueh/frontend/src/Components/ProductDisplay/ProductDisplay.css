@@ -1,0 +1,437 @@
+.productdisplay {
+  display: flex;
+  margin: 0 170px;
+}
+
+.productdisplay-left {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  position: relative; /* Để định vị kính lúp bên trong phần tử ảnh */
+}
+
+.productdisplay-main-img {
+  width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng container */
+  max-width: 500px; /* Đặt chiều rộng tối đa cho hình ảnh */
+  height: 510px; /* Cố định chiều cao cho hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh giữ tỉ lệ và lấp đầy không gian */
+  max-height: none !important; /* Gỡ bỏ mọi giới hạn chiều cao từ các CSS khác */
+}
+
+.productdisplay-img-list {
+  display: flex;
+  gap: 10px;
+}
+
+.productdisplay-img-list img {
+  height: 130px;
+}
+
+.productdisplay-right {
+  margin: 0 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productdisplay-right h1 {
+  color: #3d3d3d;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.productdisplay-right-star {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+  gap: 5px;
+  color: #1c1c1c;
+  font-size: 16px;
+}
+
+.productdisplay-right-prices {
+  display: flex;
+  margin: 40px 0;
+  gap: 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.productdisplay-right-price-old {
+  color: #818181;
+  text-decoration: line-through;
+}
+
+.productdisplay-right-price-new {
+  color: #ff4141;
+}
+
+.productdisplay-right-description {
+  font-size: 16px;
+}
+
+.productdisplay-right-size h1 {
+  margin-top: 55px;
+  color: #656565;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.productdisplay-right-sizes {
+  display: flex;
+  margin: 30px 0;
+  gap: 0;
+}
+
+.productdisplay-right-sizes div {
+  padding: 18px 24px;
+  background: #fbfbfb;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.productdisplay-right-sizes div:hover {
+  background: #D36F31;
+}
+
+/* CSS for zoom lens */
+.zoom-lens {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 150px; /* Điều chỉnh kích thước kính lúp tại đây */
+  height: 150px; /* Điều chỉnh kích thước kính lúp tại đây */
+  pointer-events: none;
+  background-repeat: no-repeat;
+  transform: translate( 0%, 0%); /* Giúp kính lúp nằm chính giữa con trỏ */
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.productdisplay-left {
+  position: relative; /* Ensure the zoom lens is positioned correctly inside the container */
+}
+
+.productdisplay-img {
+  cursor: pointer;
+  margin-top: 20px;
+  position: relative; /* Position for containing the zoom lens */
+  overflow: hidden; /* Ensure lens doesn't overflow out of the image */
+}
+
+.productdisplay-main-img {
+  width: 500px;
+  height: 510px;
+  object-fit: cover;
+}
+
+/* Phóng to ảnh */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Màu nền tối để tạo hiệu ứng overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Đảm bảo modal luôn nổi lên trên */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+}
+
+.enlarged-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain; /* Giữ tỷ lệ của hình ảnh */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-button:hover {
+  background: #cc0000;
+}
+
+
+
+/* Các nút điều chỉnh số lượng và thêm vào giỏ hàng */
+.productdisplay-right-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.counter-container {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.counter-display {
+  width: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ddd;
+  font-size: 24px;
+}
+
+.counter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-buttons button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-buttons button:hover {
+  background-color: #ddd;
+}
+
+#increment {
+  border-bottom: 1px solid #ddd;
+}
+
+#decrement {
+  border-top: 1px solid #ddd;
+}
+
+.add-to-cart {
+  background-color: #d87c37;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.add-to-cart:hover {
+  background-color: #b86d30;
+}
+
+.heart {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart:hover {
+  background-color: #d87c37;
+  color: white;
+  cursor: pointer;
+}
+
+.an-nay{
+  display: none;
+}
+
+/* Responsive CSS */
+@media(max-width:1280px) {
+  .productdisplay {
+    margin: 0px 60px;
+  }
+  .productdisplay-left {
+    gap: 10px;
+  }
+  .productdisplay-img-list {
+    gap: 10px;
+  }
+  .productdisplay-img-list img {
+    height: 120px;
+  }
+  .productdisplay-right {
+    gap: 3px;
+    font-size: 13px;
+  }
+  .productdisplay-right-prices {
+    margin: 10px, 0px;
+    font-size: 18px;
+  }
+  .productdisplay-right-size h1 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .productdisplay-right-sizes div {
+    padding: 14px 20px;
+  }
+  .productdisplay-right-button {
+    width: 100%;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+  }
+  .productdisplay-right-category {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+
+@media(max-width:1024px) {
+  .breadcrum {
+    margin: 10px 20px;
+  }
+  .productdisplay {
+    margin: 0px 30px;
+  }
+  .productdisplay-left {
+    gap: 5px;
+  }
+  .productdisplay-img-list img {
+    height: 80px;
+  }
+  .productdisplay-main-img {
+    width: 490px;
+    height: 450px;
+  }
+  .productdisplay-right h1 {
+    font-size: 18px;
+  }
+  .productdisplay-right-prices {
+    margin: 10px, 0px;
+    font-size: 18px;
+  }
+  .productdisplay-right-sizes {
+    margin-top: 10px 0px;
+  }
+  .productdisplay-right-sizes div {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  .productdisplay-right-button {
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .productdisplay-right-category {
+    font-size: 12px;
+  }
+}
+
+@media(max-width:800px) {
+  .productdisplay {
+    margin: 0px 10px;
+    flex-direction: column;
+  }
+  .productdisplay-left {
+    gap: 0px;
+    align-items: center;
+  }
+  .productdisplay-img-list {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .productdisplay-img-list img {
+    height: 70px;
+  }
+  .productdisplay-right h1 {
+    font-size: 14px;
+  }
+  .productdisplay-right-prices {
+    margin: 10px, 0px;
+    font-size: 18px;
+  }
+  .productdisplay-right-size h1 {
+    margin-top: 10px 0px;
+  }
+  .productdisplay-right-sizes {
+    margin-top: 10px;
+  }
+  .productdisplay-right-sizes div {
+    padding: 4px 11px;
+  }
+  .productdisplay-right-category {
+    font-size: 12px;
+  }
+}
+
+@media(max-width:500px) {
+  .productdisplay {
+    flex-direction: column;
+  }
+  .productdisplay-left {
+    gap: 10px;
+    flex-direction: row;
+    margin: auto;
+  }
+  .add-to-cart {
+    padding: 11px;
+  }
+  .productdisplay-img-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .productdisplay-img-list img {
+    height: 75px;
+  }
+  .productdisplay-main-img {
+    height: 330px;
+    width: 100%;
+  }
+  .productdisplay-right {
+    margin: 5px;
+  }
+  .productdisplay-right h1 {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .productdisplay-right-sizes {
+    gap: 10px;
+    margin: 20px 0px;
+  }
+  .productdisplay-right-sizes div {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .productdisplay-right-button {
+    font-size: 15px;
+    padding: 12px 0px;
+  }
+  .productdisplay-right-category {
+    font-size: 16px;
+  }
+}

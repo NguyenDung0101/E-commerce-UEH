@@ -1,0 +1,77 @@
+.order-item{
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 20px;
+  border: 1px solid rgb(117, 255, 71);
+  padding: 15px;
+  margin: 20px 0px;
+  font-size: 14px;
+  color: #505050;
+  max-width: 100%; /* Thêm max-width để tránh tràn */
+  box-sizing: border-box; /* Đảm bảo padding không làm phần tử vượt quá kích thước */
+}
+
+.order-item-food, .order-item-name{
+  font-weight: 600;
+}
+
+.order-item-name{
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.order-item-address{
+  margin-bottom: 10px;
+}
+
+.order-item select{
+  background-color: #edffef;
+  border: 1px solid rgb(117, 255, 71);
+  width: max(10vw, 120px);
+  padding: 10px;
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  .order-item{
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .order-item{
+    font-size: 12px;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+    padding: 10px 5px;
+  }
+
+  .order-item select{
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .order-item img{
+    width: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .order-item{
+    grid-template-columns: 1fr;
+    font-size: 12px;
+    padding: 10px 5px;
+    gap: 10px;
+  }
+
+  .order-item select{
+    padding: 5px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .order-item img{
+    width: 50px;
+  }
+}

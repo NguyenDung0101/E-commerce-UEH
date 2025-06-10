@@ -1,0 +1,48 @@
+.place-order {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    gap: 50px;
+    margin-top: 100px;
+    padding: 0 20px; /* Thêm padding cho khoảng cách từ lề trái và phải */
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px);
+    padding: 20px; /* Thêm khoảng trống bên trong */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+    border: 1px solid #f0f0f0; /* Tùy chọn: thêm viền nhẹ để nổi bật */
+    border-radius: 8px;
+    background-color: #fafafa; /* Tùy chọn: nền nhạt cho rõ ràng hơn */
+}
+
+.place-order-left .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+}
+
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.place-order .cart-total button {
+    margin-top: 30px;
+}

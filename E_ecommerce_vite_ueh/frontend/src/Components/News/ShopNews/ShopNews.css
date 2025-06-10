@@ -1,0 +1,31 @@
+.ShopNews {
+  flex: 1; /* Nội dung chiếm phần còn lại */
+  width: 90%;
+}
+
+.filter-n {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e1e1e1;
+  padding: 10px;
+  margin: 24px 0;
+}
+
+.orange-text-n {
+  color: #e67e22; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter-n select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 36px;
+}

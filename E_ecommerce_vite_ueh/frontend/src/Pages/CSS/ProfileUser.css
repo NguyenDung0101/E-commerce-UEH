@@ -1,0 +1,223 @@
+/* Container for the entire profile page */
+.user-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Full card container for user profile */
+.user-card-full {
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+  margin-bottom: 30px;
+}
+
+/* Profile section with background */
+.user-profile {
+  background: linear-gradient(to right, #ee5a6f, #f29263);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.user-profile .profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.user-profile h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Content section for details */
+.card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+/* Info section with responsive flex layout */
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.info-item {
+  flex: 1;
+  min-width: 45%;
+  text-align: center;
+}
+
+.info-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #919aa3;
+  font-weight: 400;
+}
+
+.user-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.user-actions .action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button {
+  background-color: #D67B42;
+  color: #fff;
+}
+
+.primary-button:hover {
+  background-color: #d36f31;
+}
+
+.secondary-button {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.secondary-button:hover {
+  background-color: #5a6268;
+}
+
+/* Change Password Form Styling */
+.change-password-form {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.change-password-form h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.change-password-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.change-password-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.save-button-pass {
+  background-color: #D67B42;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.save-button-pass:hover {
+  background-color: #c86f31;
+  transform: scale(1.05);
+}
+
+.save-button-pass:active {
+  transform: scale(0.98);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .user-card-full {
+    padding: 15px;
+  }
+
+  .user-profile {
+    padding: 15px 0;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section-title, .user-profile h6 {
+    font-size: 16px;
+  }
+
+  .info-label, .info-value {
+    font-size: 13px;
+  }
+
+  .user-actions .action-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .change-password-form h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-profile {
+    text-align: center;
+  }
+
+  .info-item {
+    min-width: 100%;
+  }
+
+  .user-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

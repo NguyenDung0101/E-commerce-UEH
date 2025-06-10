@@ -1,0 +1,85 @@
+.homslide-section1 {
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.homeslide-left {
+  flex: 3; /* Phần bên trái chiếm 3 phần */
+}
+
+.homeslide-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 2; /* Phần bên phải chiếm 2 phần */
+}
+
+.homeslide-1 img {
+  width: 100%; /* Ảnh chiếm toàn bộ chiều ngang khung chứa */
+  height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+.homeslide-section2 {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.homeslide-icon {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.homeslide-icon img {
+  width: 29px;
+  height: 29px;
+}
+
+.homeslide-icon .text1 {
+  font-weight: 700;
+  margin-bottom: 0 !important;
+  color: #D37235;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .homslide-section1 {
+    flex-direction: column; /* Chuyển sang xếp dọc cho giao diện di động */
+    padding: 20px 5%;
+  }
+
+  .homeslide-left,
+  .homeslide-1 {
+    width: 100%; /* Đảm bảo cả hai phần chiếm hết chiều ngang */
+  }
+
+  .homeslide-1 img {
+    width: 100%; /* Đảm bảo ảnh chiếm hết chiều ngang màn hình */
+    max-width: none;
+  }
+
+  @media (max-width: 768px) {
+    .homeslide-section2 {
+      flex-direction: column; /* Sắp xếp dọc cho mobile */
+      align-items: center;
+      justify-content: center;
+      gap: 20px; /* Tạo khoảng cách giữa các mục */
+      padding: 0 20px; /* Giảm padding cho giao diện di động */
+    }
+  
+    .homeslide-icon {
+      
+      gap: 10px; /* Khoảng cách giữa icon và văn bản */
+    }
+
+    .text1{
+      margin-bottom: 0 !important;
+    }
+  }
+}

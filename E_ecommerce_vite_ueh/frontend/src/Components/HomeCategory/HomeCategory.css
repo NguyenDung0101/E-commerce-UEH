@@ -1,0 +1,102 @@
+.danh-muc-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.danh-muc-title {
+  font-size: 28px;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.danh-muc-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Grid container for desktop */
+.danh-muc-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Đảm bảo các phần tử tự xuống hàng khi không đủ chỗ */
+}
+
+/* Individual item styling */
+.danh-muc-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px; /* Khoảng cách giữa các mục */
+  box-sizing: border-box;
+}
+
+.danh-muc-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0; /* Loại bỏ khoảng cách bên dưới */
+}
+
+.danh-muc-giua {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Tạo khoảng cách giữa các mục con */
+  flex: 1;
+}
+
+.danh-muc-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Khoảng cách giữa ảnh và nút */
+}
+
+.danh-muc-button {
+  padding: 10px 20px;
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%; /* Đảm bảo nút chiếm đủ chiều ngang */
+  margin-top: 10px; /* Đẩy nút xuống 10px dưới hình ảnh */
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .danh-muc-grid {
+    flex-direction: column; /* Xếp theo cột */
+    justify-content: space-between; /* Khoảng cách đều giữa các mục */
+    gap: 20px;
+    padding: 0 10px; /* Thêm lề nhỏ hai bên để không dính sát */
+  }
+
+  .danh-muc-item {
+    width: 100%; /* Chiếm toàn bộ chiều ngang */
+    max-width: none; /* Bỏ giới hạn cho mobile */
+    box-sizing: border-box; /* Đảm bảo tính cả padding vào kích thước tổng */
+  }
+
+  .danh-muc-button {
+    width: 100%; /* Nút bấm chiếm toàn bộ chiều ngang */
+    margin-top: 10px;
+  }
+
+  .danh-muc-giua {
+    width: 100%; /* Giữa cũng chiếm hết chiều ngang */
+  }
+}
+
+/* thái */
+
+.danh-muc-item:hover > img, .danh-muc-item:hover > button {
+  transform: scale(1.05);
+  transition: .5s;
+  cursor: pointer;
+}
+

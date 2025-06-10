@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%;
+}
+
+.navbar .menu {
+  display: none;
+}
+
+.navbar .logo {
+  width: max(10%, 80px);
+}
+
+.navbar .profile {
+  width: 40px;
+}
+
+@media (max-width:600px) {
+  .navbar .menu {
+    display: inline-block;
+    width: 24px;
+    margin-right: 10px;
+  }
+}

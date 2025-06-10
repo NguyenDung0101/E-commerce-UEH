@@ -1,0 +1,176 @@
+.user {
+  margin: 60px auto;
+  width: 70%;
+}
+
+.user-table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.user-table table {
+  width: 100%;
+  display: block;
+  border-collapse: collapse;
+  text-align: left;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.user-table th, 
+.user-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.user-table button {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.user-table button:nth-child(1) {
+  background-color: #3498db; /* Màu xanh cho nút Edit */
+}
+
+.user-table button:nth-child(2) {
+  background-color: #e74c3c; /* Màu đỏ cho nút Delete */
+}
+
+.user-table button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .user {
+    width: 90%;
+  }
+
+  .user-table th, 
+  .user-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .user-table button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .user-table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  
+}
+
+/* Form chỉnh sửa */
+
+.edit-form {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.edit-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.edit-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.edit-form input,
+.edit-form select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.edit-form button {
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edit-form button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .edit-form {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .edit-form h3 {
+    font-size: 1.25rem;
+  }
+
+  .edit-form form {
+    gap: 10px;
+  }
+
+  .edit-form input,
+  .edit-form select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .edit-form button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

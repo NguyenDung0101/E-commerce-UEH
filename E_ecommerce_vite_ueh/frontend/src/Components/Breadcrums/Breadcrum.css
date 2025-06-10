@@ -1,0 +1,25 @@
+.breadcrum {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5e5e5e;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 170px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .breadcrum {
+    font-size: 14px;  /* Giảm kích thước chữ để phù hợp hơn trên màn hình nhỏ */
+    margin: 8px 20px;  /* Giảm khoảng cách lề khi màn hình nhỏ */
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrum {
+    font-size: 12px;  /* Giảm kích thước chữ thêm cho màn hình rất nhỏ */
+    margin: 8px 10px;  /* Giảm khoảng cách lề để tránh việc tràn */
+    gap: 4px;          /* Giảm khoảng cách giữa các phần tử trong breadcrumb */
+  }
+}

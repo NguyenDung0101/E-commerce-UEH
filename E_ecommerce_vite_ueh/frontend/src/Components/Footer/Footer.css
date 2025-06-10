@@ -1,0 +1,148 @@
+/* Footer Section */
+.footer-section {
+  background-color: #015f69; /* Màu nền của footer */
+  color: #fff; /* Màu chữ trắng */
+  padding: 40px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #004d4d;
+}
+.footer-logo {
+  flex: 1;
+}
+.footer-logo img {
+  width: 220px;
+  margin-left: -25px;
+}
+
+.newsletter-foot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  width: 100%;
+}
+
+.footer-top input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  color: black;
+}
+
+.footer-top button {
+  background-color: #0d7d8a;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.footer-column {
+  width: 100%;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #ffffff; /* Màu chữ của tiêu đề */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  color: #e1e1e1;
+}
+
+.footer-column ul li a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons p {
+  width: 30px;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #004d4d;
+  padding-top: 10px;
+  font-size: 14px;
+}
+.footer-bottom p {
+  margin-top: 20px;
+  color: #e1e1e1;
+  font-size: 12.6px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-info a:nth-child(2) {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .user-login {
+    display: block;
+  }
+  .toggle-bar {
+    display: block;
+    cursor: pointer;
+  }
+  .content-wrapper {
+    flex-direction: column; /* Đặt sidebar lên trên content */
+  }
+
+  .sidebar {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+  }
+  .footer-section .container .footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+  .footer-column ul li {
+    width: 100%;
+  }
+  .footer-top {
+    gap: 10px;
+    align-items: start;
+    flex-direction: column;
+  }
+}

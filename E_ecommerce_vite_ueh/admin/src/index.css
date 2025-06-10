@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #fcfcfc;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+hr{
+  border: none;
+  height: 1px;
+  background-color: #a9a9a9;
+}
+
+.app-content {
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .app-content {
+    position: absolute;
+  }
+
+  .sidebar{
+    position: relative;
+    left: -100%;
+  }
+}
+
+/* Thêm */
+.app-content {
+  display: flex;
+  transition: margin-left 0.3s ease;
+}
+
+
+.sidebar-closed {
+  margin-left: 0; /* Không để khoảng trống khi sidebar đóng */
+}
+
+@media (max-width: 600px) {
+  .app-content {
+    position: relative;
+    flex-direction: column;
+  }
+}
