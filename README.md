@@ -38,12 +38,15 @@ _You can add screenshots for different screen sizes using tools like Chrome DevT
    ```bash
    git clone https://github.com/NguyenDung0101/E-commerce-UEH.git
    cd E-commerce-UEH
-2. ```cd frontend
+2. ```bash
+   cd frontend
    npm install
    npm run dev
-3. ```cd backend
+3. ```bash
+   cd backend
    npm install
    npm run server
-4. ```cd admin
+4. ```bash
+   cd admin
    npm install
    npm run server
