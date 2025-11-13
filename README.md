@@ -1,8 +1,6 @@
-# 📱 Responsive Design in E-commerce UEH Project
+# 🛍️ E-commerce UEH
 
-This repository contains a fully functional e-commerce website built for UEH. This section of the project README focuses on the **responsive design** implementation — ensuring optimal user experience across various screen sizes (desktop, tablet, mobile).
-
----
+An online shopping platform for University of Economics Ho Chi Minh City (UEH)
 
 ## 🌐 Technologies Used for Responsiveness
 
@@ -13,33 +11,6 @@ This repository contains a fully functional e-commerce website built for UEH. Th
 - **Flexbox & Grid** – Layout control for responsive UI
 
 ---
-
-## 🧪 How to Test Responsive Design
-
-1. Clone the project:
-   ```bash
-   git clone https://github.com/NguyenDung0101/E-commerce-UEH.git
-   cd E-commerce-UEH
-   ```
-2. ```bash
-   cd frontend
-   npm install
-   npm run dev
-   ```
-3. ```bash
-   cd backend
-   npm install
-   npm run server
-   ```
-4. ```bash
-   cd admin
-   npm install
-   npm run server
-   ```
-
-# 🛍️ E-commerce UEH
-
-An online shopping platform for University of Economics Ho Chi Minh City (UEH)
 
 ## 📋 Purpose
 
@@ -124,14 +95,28 @@ E-commerce-UEH/
 - Add new pages in `/src/pages`
 - Update API endpoints as needed
 
-## 🔧 npm Scripts
+## 🧪 How to Test Responsive Design
 
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run preview  # Preview production build
-npm run lint     # Check code quality
-```
+1. Clone the project:
+   ```bash
+   git clone https://github.com/NguyenDung0101/E-commerce-UEH.git
+   cd E-commerce-UEH
+   ```
+2. ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+3. ```bash
+   cd backend
+   npm install
+   npm run server
+   ```
+4. ```bash
+   cd admin
+   npm install
+   npm run server
+   ```
 
 ## 📧 Support & Contact
 
