@@ -95,7 +95,7 @@ E-commerce-UEH/
 - Add new pages in `/src/pages`
 - Update API endpoints as needed
 
-## 🧪 How to Test Responsive Design
+## 🧪 How to Run Project
 
 1. Clone the project:
    ```bash
