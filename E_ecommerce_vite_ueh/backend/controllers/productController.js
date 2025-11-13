@@ -1,6 +1,6 @@
 import productModel from "../models/productModel.js"; // Import mô hình sản phẩm để thao tác với cơ sở dữ liệu
 import fs from 'fs'; // Import thư viện hệ thống tập tin để làm việc với các file ảnh
-import userModel from "../models/userModel.js"; // Import mô hình người dùng
+import userModel from "../models/userMobel.js";
 
 // ----------------------------
 // Quản trị viên - Thêm sản phẩm mới
