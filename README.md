@@ -14,24 +14,6 @@ This repository contains a fully functional e-commerce website built for UEH. Th
 
 ---
 
-## ✅ Responsive Features
-
-| Feature                         | Mobile (≤768px) | Tablet (768px–992px) | Desktop (≥992px) |
-|---------------------------------|-----------------|----------------------|------------------|
-| Navigation bar (collapse menu)  | ✅               | ✅                    | ✅                |
-| Product grid layout             | 1 column        | 2 columns            | 3-4 columns      |
-| Image resizing                  | ✅               | ✅                    | ✅                |
-| Checkout form layout            | Stacked         | Grid form            | Full-width grid  |
-| Footer and contact section      | Collapsible     | Adjusted spacing     | Full display     |
-
----
-
-## 📸 Screenshots (Optional)
-
-_You can add screenshots for different screen sizes using tools like Chrome DevTools (Ctrl + Shift + M)._
-
----
-
 ## 🧪 How to Test Responsive Design
 
 1. Clone the project:
