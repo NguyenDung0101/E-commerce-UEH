@@ -118,12 +118,6 @@ E-commerce-UEH/
    npm run server
    ```
 
-## 📧 Support & Contact
-
-If you encounter any issues, please:
-- Create an issue on GitHub
-- Contact via email: [your-email@example.com]
-
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE)
